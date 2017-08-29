@@ -1,63 +1,99 @@
 @charset "utf-8";
 /* CSS Document */
 
+@Font-face
+		{
+			font-family: "Lucida Handwriting";
+			src: url(LHWItalic.ttf);
+}
+
+@font-face
+{
+	font-family: "Helvetica Neue";
+	src: url(HN/HelveticaNeueMed.ttf);
+}
 #wrapper
 {
-	width: 100%;
 	min-height: 100%;
-	background-color: #A9A9A9;
+	width: 100%;
+	background-color: #F6DCBC;
 	max-width: 1080px;
 	min-width: 800px;
 	margin-left: auto;
 	margin-right: auto;
-	
+	height: 700px;
+
 }
 
 html 
 {
 	height: 80%;
-	background-image: linear-gradient(to right, darkgreen, blue);
+	background-color: antiquewhite;
 	box-sizing: border-box;
 	
 }
 
 #navbar
 {
-	height: 56px;
+	height: 52px;
 	position: relative;
-	background-image: linear-gradient(to left, orange, yellow);
-	
+	background-color: darkorange;
 }
+
 
 #navbar table
 {
 	text-align: center;
-	font-family:"Arial Black", "Helvetica Neue", Arial, "sans-serif";
+	font-family:"Helvetica Neue", Arial, "sans-serif";
+	font-style: bold;
 	font-size: 28px;
-	vertical-align: top;
-	height: 24px;
-	
+	vertical-align: top;	
 }
 
 #navbar table td
 {
 	width: 20%;
 }
+#navbar table td:hover {
+	
+background-color: aquamarine;
+}
 #navbar a
 {
 	font-size: 20px;
+	text-decoration: none;
+	font-style: bold;
+	color: black;
+	text-shadow: 4px 4px 8px #808080;
 }
 
 #navbar tr
 {
-	height: 24px;
-}
-.title h1{
-	font-family: Helvetica, Arial;
-	font-style: italic;
-	font-size: 64px;
+	height: 50px;
 }
 
+.title {
+	width: 100%;
+	position: relative;
+	
+}
+.title h1{
+	font-family: "Lucida Handwriting", Helvetica, Arial;
+	font-style: italic;
+	font-size: 64px;
+	min-height: 40px;
+	text-align: center;
+	animation: csptitle 10s infinite;
+	text-shadow:  4px 4px 4px #5E5E5E;
+	
+}
+
+@keyframes csptitle{
+	0% {color: black;}
+	40% {color: blue;}
+	70% {color: red;}
+	100% {color: black;}
+}
 
 /* Dropdown link section START */
 .dropdown {
@@ -70,14 +106,15 @@ html
     background-color: #E1E2E2;
     min-width: 200px;
 	color: black;
+	box-shadow: 4px 4px 4px 4px #808080;
 }
 
 .dropdown-content a {
     color: black;
-    padding: 8px 8px;
+    padding: 10px 10px;
     text-decoration: none;
     display:block;
-	background-color: #9AAB77;
+	background-color: #FBDE00;
 	
 }
 
@@ -95,14 +132,123 @@ html
 #welcometext {
 	font-family: "Lucida Handwriting", "Helvetica Neue";
 	text-align:center;
-	height: 90%;
-	font-size: 48px;
+	height: 60px;
+	font-size: 36px;
+	src: url(LHWItalic.ttf);
+	text-shadow: 6px 6px 12px #808080;
+	animation: wtext 8s infinite;
+		
 }
 
+@keyframes wtext {
+	0% {color:black;}
+	25% {color:yellow;}
+	50% {opacity: 0.5; color:darkblue;}
+	75% {color:red;}
+	100% {color:black;}
+}
+/* Main Text Start */
 #maintext {
 	height:100%;
 	font-family: Helvetica;
 	margin-left: 10px;
 	margin-right: 10px;
-	font-size: 16px;
+	font-size: 18px;
+	line-height: 150%;
+	overflow: auto;
+	max-height: 500px;
+}
+/* Main Text End */
+
+/* Contact Table */
+#ct-table{
+	margin:15px;
+	padding: 10px;
+	text-decoration: none;
+}
+#ct-table td
+{
+	min-width: 120px;
+		
+}
+
+#ct-table tr {
+	height: 18px;
+}
+
+#ct-table td a {
+	text-decoration: none;
+	color: black
+}
+/* Google Maps Section */
+
+.gmaps {
+	
+}
+/* Google Maps END */
+
+
+/* Form START */
+
+#tblform td{
+	min-width: 280px;
+}
+
+/* Party Table */
+
+#partytable td
+{
+	min-width: 200px;
+}
+
+/* Party Table END */
+
+#imgalign img{
+	margin: auto;
+	display: block;
+}
+
+#footer
+{
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+}
+
+.imgsmalltext img {
+	display: block;
+	float: left;
+	margin-right: 25px;
+	box-shadow: 4px 4px 4px 4px #808080;
+	margin-bottom: 25px;
+	margin-top: 20px;
+}
+
+.imgsmalltext iframe {
+	margin-right: 20px;
+	box-shadow: 4px 4px 4px 4px #808080;
+	
+}
+
+.imgsmalltextright img {
+	display: block;
+	float: right;
+	box-shadow: 4px 4px 4px 4px #808080;
+	margin-left: 25px;
+	margin-bottom: 15px;
+	
+}
+
+#anim-visible {
+	opacity: 0;
+	animation: visible 3s;
+	animation-fill-mode: forwards;
+	animation-iteration-count: 1;
+	
+}
+
+@keyframes visible {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
 }
