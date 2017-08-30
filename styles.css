@@ -37,7 +37,7 @@ html
 {
 	height: 52px;
 	position: relative;
-	background-color: darkorange;
+	background-color: #FF9F2B;
 }
 
 
@@ -45,26 +45,34 @@ html
 {
 	text-align: center;
 	font-family:"Helvetica Neue", Arial, "sans-serif";
-	font-style: bold;
 	font-size: 28px;
-	vertical-align: top;	
+	vertical-align: top;
+	height: 52px;
 }
 
 #navbar table td
 {
 	width: 20%;
 }
-#navbar table td:hover {
+
+#navbar table tr
+{
+	height: 52px;
+}
+#navbar table td:hover
+{
+	background-color: aquamarine;
+}
+#navbar table td:hover .dropdown-content {
+    display:block;
 	
-background-color: aquamarine;
 }
 #navbar a
 {
 	font-size: 20px;
 	text-decoration: none;
-	font-style: bold;
 	color: black;
-	text-shadow: 4px 4px 8px #808080;
+	text-shadow: 4px 4px 8px #313131;
 }
 
 #navbar tr
@@ -118,7 +126,7 @@ background-color: aquamarine;
 	
 }
 
-.dropdown-content tr:hover{
+.dropdown-content td:hover{
 	background-color: indianred;
 }
 .dropdown-content a:hover {background-color: #f1f1f1}
@@ -143,7 +151,7 @@ background-color: aquamarine;
 @keyframes wtext {
 	0% {color:black;}
 	25% {color:yellow;}
-	50% {opacity: 0.5; color:darkblue;}
+	50% {color:darkblue;}
 	75% {color:red;}
 	100% {color:black;}
 }
@@ -157,6 +165,7 @@ background-color: aquamarine;
 	line-height: 150%;
 	overflow: auto;
 	max-height: 500px;
+	text-decoration: none;
 }
 /* Main Text End */
 
@@ -228,7 +237,7 @@ background-color: aquamarine;
 .imgsmalltext iframe {
 	margin-right: 20px;
 	box-shadow: 4px 4px 4px 4px #808080;
-	float: left;z
+	float: left;
 	
 }
 
@@ -243,13 +252,33 @@ background-color: aquamarine;
 
 #anim-visible {
 	opacity: 0;
-	animation: visible 3s;
+	animation: vis-text 3s;
 	animation-fill-mode: forwards;
 	animation-iteration-count: 1;
+	animation-delay: 2s;
+	text-decoration: none;
+	color: black;
 	
 }
-
-@keyframes visible {
+#anim-visible ul li {
+	color: black;
+	text-decoration: none;
+	
+}
+#anim-visible li:hover
+{
+	color: #8B0000;
+}
+@keyframes vis-text {
 	0% {opacity: 0;}
 	100% {opacity: 1;}
+}
+
+.bg
+{
+	background-size: cover;
+	background-image: url(images/we-re-rabbits-1439192-1279x850.jpg);
+	background-repeat: no-repeat;
+	width: 100%;
+	opacity: 0.5;
 }
