@@ -4,7 +4,7 @@
 @Font-face
 		{
 			font-family: "Lucida Handwriting";
-			src: url(LHWItalic.ttf);
+			src: url(HN/LHWItalic.ttf);
 }
 
 @font-face
@@ -145,6 +145,7 @@ html
 	src: url(LHWItalic.ttf);
 	text-shadow: 6px 6px 12px #808080;
 	animation: wtext 8s infinite;
+	min-height: 100%;
 		
 }
 
@@ -223,6 +224,7 @@ html
   bottom: 0;
   left: 0;
   text-align: center;
+	position: relative;
 }
 
 .imgsmalltext img {
@@ -276,9 +278,10 @@ html
 
 .bg
 {
-	background-size: cover;
+	
 	background-image: url(images/we-re-rabbits-1439192-1279x850.jpg);
 	background-repeat: no-repeat;
 	width: 100%;
 	opacity: 0.5;
+	margin-top: 50px;
 }
